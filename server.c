@@ -6,7 +6,7 @@
 /*   By: lpaixao- <lpaixao-@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 14:44:39 by lpaixao-          #+#    #+#             */
-/*   Updated: 2024/02/17 00:52:25 by lpaixao-         ###   ########.fr       */
+/*   Updated: 2024/02/17 11:03:48 by lpaixao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,22 @@
 #include "my_libft/libft.h"
 #include <signal.h>
 
-#include <stdio.h>
-#include <sys/types.h>
-#include <unistd.h>
-#include <stdlib.h>
-
 void	action(int sig)
 {
-	static int	byte;
-	static int	i;
+	static int	byte = 0;
+	static int	i = 0;
 	int	arr[8] = {128, 64, 32, 16, 8, 4, 2, 1};
 
-	if (!byte)
-		byte = 0;
-	if (!i || i == 8)
+/*	if (!byte)
+		byte = 0;*/
+	if (i == 8)
 	{
 		byte = 0;
 		i = 0;
 	}
-	if (sig == SIGUSR1) // É 1
+	if (sig == SIGUSR1)
 		byte += arr[i];
-	else if (sig == SIGUSR2) // É 0
+	else if (sig == SIGUSR2)
 		byte += 0;
 	if (i == 7)
 		write(1, &byte, 1);

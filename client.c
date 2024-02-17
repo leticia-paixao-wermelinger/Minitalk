@@ -6,15 +6,11 @@
 /*   By: lpaixao- <lpaixao-@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 20:35:13 by lpaixao-          #+#    #+#             */
-/*   Updated: 2024/02/17 00:35:34 by lpaixao-         ###   ########.fr       */
+/*   Updated: 2024/02/17 11:04:15 by lpaixao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "my_libft/libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <sys/types.h>
 #include <signal.h>
 
 void	send_int(int pid, int n)
