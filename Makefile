@@ -6,7 +6,7 @@
 #    By: lpaixao- <lpaixao-@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/17 00:22:34 by lpaixao-          #+#    #+#              #
-#    Updated: 2024/02/17 11:26:11 by lpaixao-         ###   ########.fr        #
+#    Updated: 2024/02/17 11:29:22 by lpaixao-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ clean:
 
 fclean: clean
 	make fclean -C my_libft
-	rm -f $(NAME_LIB)
+	rm -f $(NAME)
 	rm -f $(SERVER) $(CLIENT)
 	@echo "Server and Client have beem cleaned successfully"
 	@echo "Servidor e clientes foram limpos com sucesso"
