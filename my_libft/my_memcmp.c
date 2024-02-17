@@ -6,7 +6,7 @@
 /*   By: lpaixao- <lpaixao-@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 00:16:35 by lpaixao-          #+#    #+#             */
-/*   Updated: 2024/02/17 00:16:38 by lpaixao-         ###   ########.fr       */
+/*   Updated: 2024/02/17 11:16:00 by lpaixao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,17 +34,3 @@ int	my_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (cmp);
 }
-/*
-int	main()
-{
-	#include <stdio.h>
-
-	int	arr1[] = {25, 50, 999999999, 100};
-	int	arr2[] = {25, 50, 75, 100};
-	unsigned int	number = 9;
-
-	printf("Retorno da minha my_memcmp(): %i\n", my_memcmp(arr1, arr2, number));
-	printf("Retorno da memcmp() original: %i\n", memcmp(arr1, arr2, number));
-	printf("\n\n Retorno da minha my_memcmp(): %i\n", my_memcmp("t\200", "t\0", 2));
-	printf("Retorno da memcmp() original: %i\n", memcmp("t\200", "t\0", 2));
-}*/

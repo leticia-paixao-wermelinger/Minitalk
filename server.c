@@ -6,10 +6,9 @@
 /*   By: lpaixao- <lpaixao-@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 14:44:39 by lpaixao-          #+#    #+#             */
-/*   Updated: 2024/02/17 11:08:32 by lpaixao-         ###   ########.fr       */
+/*   Updated: 2024/02/17 11:14:29 by lpaixao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "my_libft/libft.h"
 #include <signal.h>
@@ -18,8 +17,16 @@ void	action(int sig)
 {
 	static int	byte = 0;
 	static int	i = 0;
-	int	arr[8] = {128, 64, 32, 16, 8, 4, 2, 1};
+	int			arr[8];
 
+	arr[0] = 128;
+	arr[1] = 64;
+	arr[2] = 32;
+	arr[3] = 16;
+	arr[4] = 8;
+	arr[5] = 4;
+	arr[6] = 2;
+	arr[7] = 1;
 	if (i == 8)
 	{
 		byte = 0;
@@ -34,7 +41,7 @@ void	action(int sig)
 	i++;
 }
 
-int	main()
+int	main(void)
 {
 	signal(SIGUSR1, action);
 	signal(SIGUSR2, action);

@@ -6,7 +6,7 @@
 /*   By: lpaixao- <lpaixao-@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 00:18:05 by lpaixao-          #+#    #+#             */
-/*   Updated: 2024/02/17 00:18:07 by lpaixao-         ###   ########.fr       */
+/*   Updated: 2024/02/17 11:18:34 by lpaixao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ char	*my_strjoin(char const *s1, char const *s2)
 	j = 0;
 	if (!s1 || !s2)
 		return (NULL);
-	string = (char *)malloc((my_own_strlen(s1) + my_own_strlen(s2) + 1) * sizeof(char));
+	string = (char *)malloc((my_own_strlen(s1) + \
+			my_own_strlen(s2) + 1) * sizeof(char));
 	if (!string)
 		return (NULL);
 	while (s1[i])

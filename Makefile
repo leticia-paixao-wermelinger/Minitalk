@@ -6,13 +6,15 @@
 #    By: lpaixao- <lpaixao-@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/17 00:22:34 by lpaixao-          #+#    #+#              #
-#    Updated: 2024/02/17 10:58:49 by lpaixao-         ###   ########.fr        #
+#    Updated: 2024/02/17 11:26:11 by lpaixao-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SERVER = server
 
 CLIENT = client
+
+NAME = libft.a
 
 CC = cc
 
@@ -28,12 +30,10 @@ OPEN_C = ./client
 
 LIBFT = my_libft/libft.a
 
-NAME_LIB = libft.a
-
 all: $(LIBFT)
-	cp my_libft/libft.a $(NAME_LIB)
-	$(CC) $(FLAGS) $(THE_SERVER) $(NAME_LIB) -o $(SERVER)
-	$(CC) $(FLAGS) $(THE_CLIENT) $(NAME_LIB) -o $(CLIENT)
+	cp my_libft/libft.a $(NAME)
+	$(CC) $(FLAGS) $(THE_SERVER) $(NAME) -o $(SERVER)
+	$(CC) $(FLAGS) $(THE_CLIENT) $(NAME) -o $(CLIENT)
 	@echo "Server and Client are ready"
 	@echo "Servidor e Cliente estão prontos"
 
@@ -51,3 +51,6 @@ fclean: clean
 	@echo "Servidor e clientes foram limpos com sucesso"
 
 re: fclean all
+
+norm: 
+	norminette -R CheckForbiddenSourceHeader

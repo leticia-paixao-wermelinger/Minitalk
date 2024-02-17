@@ -6,7 +6,7 @@
 /*   By: lpaixao- <lpaixao-@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 20:35:13 by lpaixao-          #+#    #+#             */
-/*   Updated: 2024/02/17 11:04:15 by lpaixao-         ###   ########.fr       */
+/*   Updated: 2024/02/17 11:15:14 by lpaixao-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ void	send_int(int pid, int n)
 int	main(int argc, char *argv[])
 {
 	char	*str;
-	int	pid;
-	int	i;
+	int		pid;
+	int		i;
 
 	i = 0;
 	if (argc != 3)
