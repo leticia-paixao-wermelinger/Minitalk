@@ -6,13 +6,17 @@
 #    By: lpaixao- <lpaixao-@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/17 00:22:34 by lpaixao-          #+#    #+#              #
-#    Updated: 2024/02/17 11:29:22 by lpaixao-         ###   ########.fr        #
+#    Updated: 2024/02/18 20:47:06 by lpaixao-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SERVER = server
 
 CLIENT = client
+
+SERVER_BONUS = server_bonus
+
+CLIENT_BONUS = client_bonus
 
 NAME = libft.a
 
@@ -24,9 +28,9 @@ THE_SERVER = server.c
 
 THE_CLIENT = client.c
 
-OPEN_S = ./server
+THE_SERVER_BONUS = server_bonus.c
 
-OPEN_C = ./client
+THE_CLIENT_BONUS = client_bonus.c
 
 LIBFT = my_libft/libft.a
 
@@ -46,11 +50,18 @@ clean:
 fclean: clean
 	make fclean -C my_libft
 	rm -f $(NAME)
-	rm -f $(SERVER) $(CLIENT)
-	@echo "Server and Client have beem cleaned successfully"
+	rm -f $(SERVER) $(CLIENT) $(SERVER_BONUS) $(CLIENT_BONUS)
+	@echo "Server and Client have been cleaned successfully"
 	@echo "Servidor e clientes foram limpos com sucesso"
 
 re: fclean all
+
+bonus: $(LIBFT)
+	cp my_libft/libft.a $(NAME)
+	$(CC) $(FLAGS) $(THE_SERVER_BONUS) $(NAME) -o $(SERVER_BONUS)
+	$(CC) $(FLAGS) $(THE_CLIENT_BONUS) $(NAME) -o $(CLIENT_BONUS)
+	@echo "Server bonus and Client bonus are ready"
+	@echo "Servidor bônus e Cliente bônus estão prontos"
 
 norm: 
 	norminette -R CheckForbiddenSourceHeader
