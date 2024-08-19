@@ -1,2 +1,2 @@
 # Minitalk
-A communication program in the form of a client and a server.
+A small data exchange program in the form of a client and a server, using UNIX signals.
